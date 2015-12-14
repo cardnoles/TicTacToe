@@ -6,6 +6,7 @@ var board = [];
 for (i = 0; i < 9; i++) {
   board[i] = null;
 }
+
 var gameOver = false;
 
 function gameWinner(gameBoard) {
@@ -18,31 +19,35 @@ for (i = 0 ; i < gameBoard.length; i++) {
     var oCounter = 0;
 
 
-    for (x = 0 ; x < gameBoard[i].length ; x++) {
-        if (gameBoard[i][x] === 'x') {
 
+    for (x = 0 ; x < gameBoard[i].length ; x++) {
+
+              if (gameBoard[i][x] === 'x') {
               xCounter += 1;
               //console.log("this is the xCounter: " + xCounter);
-
                if(xCounter === 3 ){
+                //console.log("x is the winner");
                 xWinner = true;
                 gameOver = true;
                }//closes if inside if
-             }//closes if
+             }//closes else if
+
+
 
               else if (gameBoard[i][x] === 'o') {
               oCounter += 1;
-              //console.log("this is the oCounter: " + oCounter);
+              console.log("this is the oCounter: " + oCounter);
                if(oCounter === 3 ){
+                console.log("o is the winner");
                 oWinner = true;
                 gameOver = true;
                }//closes if inside if
              }//closes else if
 
-               /*else if (gameBoard[i][x] != 'x' && gameBoard[i][x] != 'o') {
+               else if (gameBoard[i][x] != 'x' && gameBoard[i][x] != 'o') {
               //console.log("there is no chance");
                 Winner = false;
-             }//closes else if*/
+             }//closes else if
 
 
             else {
@@ -52,46 +57,25 @@ for (i = 0 ; i < gameBoard.length; i++) {
 
         }//closes second for loop
 
-        //console.log("x won? " + xWinner);
-             //console.log("o won? " + oWinner);
+        /*console.log("x won? " + xWinner);
+             //console.log("o won? " + oWinner);*/
 
              if (xWinner){
-              //console.log("The winner is x!!");
-              var winStr = "the winner is x";
-              alert(winStr);
-              return winStr;
+              alert("x is the Winner!");
               }//closes if xWinner
 
              else if (oWinner){
-              //console.log("the winner is o!!");
-              winStr = "the winner is o";
-              alert(winStr);
-              //gameOver = true;
-              return winStr;
+              alert("o is the Winner");
                 }//closes if oWinner
 
-              else {
-                winStr = "there is no winner";
-                //gameOver = true;
-                return winStr;
-                }//closes else
+              /*else {
+                alert("there is no winner");
+                }//closes else*/
 
       } //closes first for loop
 
 
-} //closes function
-
-
-
-
-
-
-
-
-
-
-
-
+} // gameWinner closes function
 
 
 var moveCounter = 0;
@@ -99,23 +83,30 @@ var playerMove = 'x';
 
 var divElements = document.getElementsByTagName("div");
 var boxNumber;
-var r=0;
+var r;
 
 for (i = 0 ; i < divElements.length ; i++) {
 divElements[i].onclick = function() {
 
-  if (playerMove === 'x') {
-  this.querySelector("p").textContent = "X";
-  this.querySelector("p").style.background = "white";
-  this.querySelector("p").style.border = "5px solid gray";
-  this.style.background = "black";
+
+  if((this.querySelector("p").textContent === "X") || (this.querySelector("p").textContent === "O")) {
+    alert ('this box is occupied - choose again');
   }
+
+
   else {
-  this.querySelector("p").textContent = "O";
-  this.querySelector("p").style.background = "white";
-  this.querySelector("p").style.border = "5px solid gray";
-  this.querySelector("p").style.color = "red";
-  this.style.background = "red";
+     if (playerMove === 'x') {
+       this.querySelector("p").textContent = "X";
+       this.querySelector("p").style.background = "white";
+       this.querySelector("p").style.border = "5px solid gray";
+       this.style.background = "black";
+  }
+     else {
+       this.querySelector("p").textContent = "O";
+       this.querySelector("p").style.background = "white";
+       this.querySelector("p").style.border = "5px solid gray";
+       this.querySelector("p").style.color = "red";
+       this.style.background = "red";
   }
   boxNumber = this.id;
   //console.log(boxNumber);
@@ -208,7 +199,7 @@ switch(boxNumber) {
     } //closes switch
 //console.log(r);
 //console.log(board[r]);
-//console.log(board);
+console.log(board);
 //console.log("this is box 3 " + board[2]);
 
 var one = board[0];
@@ -235,13 +226,13 @@ var gameBoardDiagonals = [[one, five, nine],[three, five, seven]];
 gameWinner(gameBoardRows);
 gameWinner(gameBoardColumns);
 gameWinner(gameBoardDiagonals);
-console.log("this is gameOver " + gameOver);
+
 
 
 
 
 if (!gameOver) {
-moveCounter = moveCounter + 1;
+moveCounter += 1;
 //console.log(moveCounter);
        if (moveCounter % 2 != 0) {
          playerMove = "o";
@@ -255,7 +246,7 @@ moveCounter = moveCounter + 1;
 else {
   console.log("announce winner and reset game");
 }
-
+     }//closes else
   } //closes onclick function
 
 } //closes for
@@ -335,6 +326,30 @@ for (i = 0 ; i < gameBoard.length; i++) {
 gameWinner(gameBoardRows);
 gameWinner(gameBoardColumns);
 gameWinner(gameBoardDiagonals);*/
+
+
+        /*if (gameBoard[i][x] === 'x') {
+              xCounter += 1;
+              console.log("this is the xCounter " + xCounter);
+               if(xCounter === 3 ){
+                xWinner = true;
+                //gameOver = true;
+               }//closes inside if
+             }//closes if
+
+              else if (gameBoard[i][x] === 'o') {
+              oCounter += 1;
+              console.log("this is the oCounter " + oCounter);
+               if(oCounter === 3 ){
+                oWinner = true;
+                //gameOver = true;
+               }//closes if inside if
+             }//closes else if
+
+            else {
+              //console.log("no winner");
+              Winner = false;
+             }//closes else*/
 
 
 
