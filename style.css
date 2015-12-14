@@ -1,0 +1,124 @@
+body {
+  background-color: gray;
+  padding: 0px;
+}
+
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 36px;
+}
+
+#container{
+  width: 100%;
+}
+
+div {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #bfbfbf;
+  position: relative;
+}
+
+p {
+  font-size: 128px;
+  padding: 12px;
+  margin: 0;
+
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+
+#one {
+  width: 31%;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+#two {
+  width: 31%;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+
+}
+
+#three {
+  width: 31%;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+
+}
+
+#four {
+  width: 31%;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+#five {
+  width: 31%;
+  border: 2px solid white;
+}
+
+#six {
+  width: 31%;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+
+}
+
+#seven {
+  width: 31%;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+}
+
+#eight {
+  width: 31%;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+
+}
+#nine {
+  width: 31%;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+
+
+
+
+
+#rowOne {
+  height: 200px;
+  width:800px;
+  margin: 0 auto;
+}
+
+#rowTwo {
+  height: 200px;
+  width:800px;
+  margin: 0 auto;
+}
+
+#rowThree {
+  height: 200px;
+  width:800px;
+  margin: 0 auto;
+}
+
+
+
+
+
