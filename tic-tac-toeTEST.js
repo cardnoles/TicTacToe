@@ -1,6 +1,8 @@
 //var what = document.querySelector("p#textOne").textContent = 'x';
 //console.log(what)
 
+document.getElementById("game").onclick = playGame;
+
   // initialize board
 var board = [];
 for (i = 0; i < 9; i++) {
@@ -15,23 +17,27 @@ var firstPlayer;
 var secondPlayer;
 var xIsFirst;
 
-
+//22, 23, 24, 27, 36,37,38
 
 
 function playGame() {
    alert("ready to play");
-    playerX = prompt("enter the name of player x");
-    playerO = prompt("enter the name of player o");
+    //playerX = prompt("enter the name of player x");
+    playerX = document.getElementById("playerX").value;
+    console.log("this is X " + playerX);
+    //playerO = prompt("enter the name of player o");
+    playerO = document.getElementById("playerO").value;
+    console.log("this is O " + playerO);
     document.querySelector("h2#x").textContent = playerX + " is Player X";
     document.querySelector("h2#o").textContent = playerO + " is Player O";
-    firstPlayer = prompt("who is playing first?");
+    //firstPlayer = prompt("who is playing first?");
     document.querySelector("h3#alerts").textContent = firstPlayer + " clicks first";
    //alert(firstPlayer + " click on a box");
 
 
-console.log(playerX);
-console.log(playerO);
-console.log(firstPlayer);
+//console.log(playerX);
+//console.log(playerO);
+//console.log(firstPlayer);
 }
 
 
@@ -316,7 +322,9 @@ else {
 
 } //closes for
 
-playGame(); //line 18
+
+
+//playGame(); //line 18
 firstMove(); // line 99
 
 
