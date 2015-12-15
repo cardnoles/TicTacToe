@@ -21,7 +21,6 @@ var xIsFirst;
 
 
 function playGame() {
-   alert("ready to play");
     playerX = document.getElementById("playerX").value;
     console.log("this is X " + playerX);
     playerO = document.getElementById("playerO").value;
@@ -48,6 +47,8 @@ for (i = 0 ; i < gameBoard.length; i++) {
 
 
 
+
+
     for (x = 0 ; x < gameBoard[i].length ; x++) {
 
               if (gameBoard[i][x] === 'x') {
@@ -58,7 +59,7 @@ for (i = 0 ; i < gameBoard.length; i++) {
                 xWinner = true;
                 gameOver = true;
                }//closes if inside if
-             }//closes else if
+             }
 
 
 
@@ -85,6 +86,7 @@ for (i = 0 ; i < gameBoard.length; i++) {
 
         }//closes second for loop
 
+
         /*console.log("x won? " + xWinner);
              //console.log("o won? " + oWinner);*/
 
@@ -98,8 +100,8 @@ for (i = 0 ; i < gameBoard.length; i++) {
               //alert(playerO + " is the Winner");
                 }//closes if oWinner
 
-              /*else {
-                alert("there is no winner");
+              /*else if (!Winner){
+                  alert("there is no winner");
                 }//closes else*/
 
       } //closes first for loop
@@ -135,7 +137,7 @@ divElements[i].onclick = function() {
 
 
   if((this.querySelector("p").textContent === "X") || (this.querySelector("p").textContent === "O")) {
-    alert ('this box is occupied - choose again');
+    document.querySelector("h3#alerts").textContent ='this box is occupied - choose again';
   }
 
 
@@ -304,6 +306,9 @@ console.log(moveCounter);
           document.querySelector("h3#alerts").textContent = "it is " + playerO +"'s turn";
           //alert("it is " + playerO +"'s turn");
        }
+  }
+  if (moveCounter === 9) {
+    document.querySelector("h3#alerts").textContent = "cat's tail - no winner";
   }
 } //close gameOver if
 else {
