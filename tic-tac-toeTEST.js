@@ -3,6 +3,7 @@
 
 document.getElementById("game").onclick = playGame;
 
+
   // initialize board
 var board = [];
 for (i = 0; i < 9; i++) {
@@ -14,21 +15,24 @@ var gameOver = false;
 var playerX;
 var playerO;
 var firstPlayer;
-var secondPlayer;
+//var secondPlayer;
 var xIsFirst;
+var playerMove;
 
 
 
 
 function playGame() {
+
+
     playerX = document.getElementById("playerX").value;
-    console.log("this is X " + playerX);
+    //console.log("this is X " + playerX);
     playerO = document.getElementById("playerO").value;
-    console.log("this is O " + playerO);
+    //console.log("this is O " + playerO);
     document.querySelector("h2#x").textContent = playerX + " is Player X";
     document.querySelector("h2#o").textContent = playerO + " is Player O";
     firstPlayer = document.getElementById("playerOne").value;
-    console.log(firstPlayer);
+    //console.log(firstPlayer);
     document.querySelector("h3#alerts").textContent = firstPlayer + " clicks first";
     firstMove();
 }
@@ -110,7 +114,7 @@ for (i = 0 ; i < gameBoard.length; i++) {
 } // gameWinner closes function
 
 
-   function firstMove() {
+  function firstMove() {
    if(firstPlayer === playerX){
         playerMove = 'x';
         xIsFirst = true;
@@ -121,10 +125,11 @@ for (i = 0 ; i < gameBoard.length; i++) {
     xIsFirst = false;
       }
       console.log("this is playerMove " + playerMove);
-      return playerMove;
-  }
+}
+
 
 var moveCounter = 0;
+
 
 
 
@@ -328,110 +333,81 @@ else {
 
 
 
+//this function is ridiculous
+function playAgain() {
+
+    location.reload();
 
 
 
-/*
-for (i = 0 ; i < gameBoard.length; i++) {
-         console.log(gameBoard[i]);
-    var Winner = true;
-    var xWinner = false;
-    var oWinner = false;
-    var xCounter = 0;
-    var oCounter = 0;
+  /*console.log("playing again");
 
-    for (x = 0 ; x < gameBoard[i].length ; x++) {
-         console.log(gameBoard[i][x]);
-         var clickValue = gameBoard[i][x];
-         console.log(clickValue);
+  document.getElementById("textOne").textContent = "";
+  document.getElementById("textOne").style.background = "";
+  document.getElementById("textOne").style.border = "";
+  document.getElementById("one").style.background = "";
 
 
-            if (gameBoard[i][x] === 'x') {
+  document.getElementById("textTwo").textContent = "";
+  document.getElementById("textTwo").style.background = "";
+  document.getElementById("textTwo").style.border = "";
+  document.getElementById("two").style.background = "";
 
-              xCounter += 1;
-              console.log("this is the xCounter: " + xCounter);
+  document.getElementById("textThree").textContent = "";
+  document.getElementById("textThree").style.background = "";
+  document.getElementById("textThree").style.border = "";
+  document.getElementById("three").style.background = "";
 
-               if(xCounter === 3 ){
-                xWinner = true;
-               }//closes if inside if
-             }//closes if
+  document.getElementById("textFour").textContent = "";
+  document.getElementById("textFour").style.background = "";
+  document.getElementById("textFour").style.border = "";
+  document.getElementById("four").style.background = "";
 
-              else if (gameBoard[i][x] === 'o') {
-              oCounter += 1;
-              console.log("this is the oCounter: " + oCounter);
-               if(oCounter === 3 ){
-                oWinner = true;
-               }//closes if inside if
-             }//closes else if
+  document.getElementById("textFive").textContent = "";
+  document.getElementById("textFive").style.background = "";
+  document.getElementById("textFive").style.border = "";
+  document.getElementById("five").style.background = "";
 
-               else if (gameBoard[i][x] != 'x' && gameBoard[i][x] != 'o') {
-              console.log("there is no chance");
-                Winner = false;
-             }//closes else if
+  document.getElementById("textSix").textContent = "";
+  document.getElementById("textSix").style.background = "";
+  document.getElementById("textSix").style.border = "";
+  document.getElementById("six").style.background = "";
 
+  document.getElementById("textSeven").textContent = "";
+  document.getElementById("textSeven").style.background = "";
+  document.getElementById("textSeven").style.border = "";
+  document.getElementById("seven").style.background = "";
 
-            else {
-              console.log("no winner");
-              Winner = false;
-             }//closes else
+  document.getElementById("textEight").textContent = "";
+  document.getElementById("textEight").style.background = "";
+  document.getElementById("textEight").style.border = "";
+  document.getElementById("eight").style.background = "";
 
-        }//closes second for loop
+  document.getElementById("textNine").textContent = "";
+  document.getElementById("textNine").style.background = "";
+  document.getElementById("textNine").style.border = "";
+  document.getElementById("nine").style.background = "";
 
-        console.log("x won? " + xWinner);
-             console.log("o won? " + oWinner);
+  document.querySelector("h2#x").textContent = "";
+  document.querySelector("h2#o").textContent = "";
+  document.getElementById("playerOne").value="";
+  document.getElementById("playerX").value="";
+  document.getElementById("playerO").value="";
+  document.querySelector("h3#alerts").textContent = "enter info again and click 'play game' to play another game ";
+  var board = [];
+    for (i = 0; i < 9; i++) {
+    board[i] = null;
+    console.log(board);
+    moveCounter = 0;
+}*/
 
-             if (xWinner){
-              console.log("The winner is x!!");
-              var winStr = "the winner is x";
-              return winStr;
-             }//closes if xWinner
+}
+  document.getElementById("again").onclick = playAgain;
 
-             else if (oWinner){
-              console.log("the winner is o!!");
-              winStr = "the winner is o";
-              return winStr;
-                }//closes if oWinner
-
-              else {
-                console.log("Cat's tail");
-                }//closes else
-
-      } //closes first for loop
-
-} //closes function
-
-
-gameWinner(gameBoardRows);
-gameWinner(gameBoardColumns);
-gameWinner(gameBoardDiagonals);*/
-
-
-        /*if (gameBoard[i][x] === 'x') {
-              xCounter += 1;
-              console.log("this is the xCounter " + xCounter);
-               if(xCounter === 3 ){
-                xWinner = true;
-                //gameOver = true;
-               }//closes inside if
-             }//closes if
-
-              else if (gameBoard[i][x] === 'o') {
-              oCounter += 1;
-              console.log("this is the oCounter " + oCounter);
-               if(oCounter === 3 ){
-                oWinner = true;
-                //gameOver = true;
-               }//closes if inside if
-             }//closes else if
-
-            else {
-              //console.log("no winner");
-              Winner = false;
-             }//closes else*/
+  //playAgain();
 
 
-
-
+  //console.log(board);
 
 
 
