@@ -30,8 +30,10 @@ function playGame() {
     console.log("this is O " + playerO);
     document.querySelector("h2#x").textContent = playerX + " is Player X";
     document.querySelector("h2#o").textContent = playerO + " is Player O";
-    //firstPlayer = prompt("who is playing first?");
+    firstPlayer = document.getElementById("playerOne").value;
+    console.log(firstPlayer);
     document.querySelector("h3#alerts").textContent = firstPlayer + " clicks first";
+    firstMove();
    //alert(firstPlayer + " click on a box");
 
 
@@ -325,7 +327,7 @@ else {
 
 
 //playGame(); //line 18
-firstMove(); // line 99
+//firstMove(); // line 99
 
 
 
