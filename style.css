@@ -7,7 +7,51 @@ body {
 h1 {
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  font-size: 36px;
+  font-size: 60px;
+  position: relative;
+  width: 45%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+nav {
+  border: 2px solid yellow;
+  width: 95%;
+
+}
+
+h2 {
+  font-size: 30px;
+  width: 40%;
+  display: inline-block;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+h3 {
+  position: relative;
+  width: 70%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px black solid;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#x {
+  color: black;
+  border: 2px solid black;
+}
+
+#o {
+  color: red;
+  border: 2px solid red;
 }
 
 #container{
@@ -117,6 +161,8 @@ p {
   width:800px;
   margin: 0 auto;
 }
+
+
 
 
 

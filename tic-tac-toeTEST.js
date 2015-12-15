@@ -9,6 +9,34 @@ for (i = 0; i < 9; i++) {
 
 var gameOver = false;
 
+var playerX;
+var playerO;
+var firstPlayer;
+var secondPlayer;
+var xIsFirst;
+
+
+
+
+function playGame() {
+   alert("ready to play");
+    playerX = prompt("enter the name of player x");
+    playerO = prompt("enter the name of player o");
+    document.querySelector("h2#x").textContent = playerX + " is Player X";
+    document.querySelector("h2#o").textContent = playerO + " is Player O";
+    firstPlayer = prompt("who is playing first?");
+    document.querySelector("h3#alerts").textContent = firstPlayer + " clicks first";
+   //alert(firstPlayer + " click on a box");
+
+
+console.log(playerX);
+console.log(playerO);
+console.log(firstPlayer);
+}
+
+
+
+
 function gameWinner(gameBoard) {
 
 for (i = 0 ; i < gameBoard.length; i++) {
@@ -61,11 +89,13 @@ for (i = 0 ; i < gameBoard.length; i++) {
              //console.log("o won? " + oWinner);*/
 
              if (xWinner){
-              alert("x is the Winner!");
+              document.querySelector("h3#alerts").textContent = playerX + " is the Winner!"
+              //alert(playerX + " is the Winner!");
               }//closes if xWinner
 
              else if (oWinner){
-              alert("o is the Winner");
+              document.querySelector("h3#alerts").textContent = playerO + " is the Winner!"
+              //alert(playerO + " is the Winner");
                 }//closes if oWinner
 
               /*else {
@@ -78,11 +108,26 @@ for (i = 0 ; i < gameBoard.length; i++) {
 } // gameWinner closes function
 
 
+   function firstMove() {
+   if(firstPlayer === playerX){
+        playerMove = 'x';
+        xIsFirst = true;
+      }
+
+   else {
+    playerMove = 'o';
+    xIsFirst = false;
+      }
+      console.log("this is playerMove " + playerMove);
+      return playerMove;
+  }
+
 var moveCounter = 0;
-var playerMove = 'x';
+
+
+
 
 var divElements = document.getElementsByTagName("div");
-var boxNumber;
 var r;
 
 for (i = 0 ; i < divElements.length ; i++) {
@@ -108,7 +153,7 @@ divElements[i].onclick = function() {
        this.querySelector("p").style.color = "red";
        this.style.background = "red";
   }
-  boxNumber = this.id;
+  var boxNumber = this.id;
   //console.log(boxNumber);
   //console.log("this is board r: " + board[r]);
 
@@ -233,23 +278,49 @@ gameWinner(gameBoardDiagonals);
 
 if (!gameOver) {
 moveCounter += 1;
-//console.log(moveCounter);
+
+console.log(moveCounter);
+  if(xIsFirst) {
+
        if (moveCounter % 2 != 0) {
          playerMove = "o";
-         alert("it is player O's turn");
+         document.querySelector("h3#alerts").textContent = "it is " + playerO +"'s turn";
+         //alert("it is " + playerO +"'s turn");
        }
        else {
           playerMove = "x";
-          alert("it is player X's turn");
+          document.querySelector("h3#alerts").textContent = "it is " + playerX +"'s turn";
+          //alert("it is " +  playerX +"'s turn");
        }
-}
+  }
+  else {
+       if (moveCounter % 2 != 0) {
+         playerMove = "x";
+         document.querySelector("h3#alerts").textContent = "it is " + playerX +"'s turn";
+         //alert("it is " +  playerX +"'s turn");
+       }
+       else {
+          playerMove = "o";
+          document.querySelector("h3#alerts").textContent = "it is " + playerO +"'s turn";
+          //alert("it is " + playerO +"'s turn");
+       }
+  }
+} //close gameOver if
 else {
   console.log("announce winner and reset game");
 }
-     }//closes else
+
+
+     }//closes else on 133
   } //closes onclick function
 
 } //closes for
+
+playGame(); //line 18
+firstMove(); // line 99
+
+
+
 
 
 
