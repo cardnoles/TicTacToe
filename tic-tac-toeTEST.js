@@ -1,5 +1,5 @@
 //var what = document.querySelector("p#textOne").textContent = 'x';
-//console.log(what)
+
 
 document.getElementById("game").onclick = playGame;
 
@@ -17,15 +17,13 @@ var firstPlayer;
 var secondPlayer;
 var xIsFirst;
 
-//22, 23, 24, 27, 36,37,38
+
 
 
 function playGame() {
    alert("ready to play");
-    //playerX = prompt("enter the name of player x");
     playerX = document.getElementById("playerX").value;
     console.log("this is X " + playerX);
-    //playerO = prompt("enter the name of player o");
     playerO = document.getElementById("playerO").value;
     console.log("this is O " + playerO);
     document.querySelector("h2#x").textContent = playerX + " is Player X";
@@ -34,12 +32,6 @@ function playGame() {
     console.log(firstPlayer);
     document.querySelector("h3#alerts").textContent = firstPlayer + " clicks first";
     firstMove();
-   //alert(firstPlayer + " click on a box");
-
-
-//console.log(playerX);
-//console.log(playerO);
-//console.log(firstPlayer);
 }
 
 

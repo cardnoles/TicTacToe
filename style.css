@@ -15,7 +15,6 @@ h1 {
 }
 
 nav {
-  border: 2px solid yellow;
   width: 95%;
 
 }
@@ -24,7 +23,7 @@ h2 {
   font-size: 30px;
   width: 40%;
   display: inline-block;
-  margin: 0px auto;
+  margin: 0px 2%;
   background-color: white;
   border-radius: 25px;
   padding: 10px;
@@ -42,6 +41,19 @@ h3 {
   border: 2px black solid;
   text-align: center;
   margin: 10px auto;
+}
+
+button {
+width: 25%;
+background-color: red;
+font-size: 24px;
+border-radius: 18px;
+color: white;
+position: block;
+margin: 5px 33%;
+
+
+
 }
 
 #x {
