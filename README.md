@@ -11,6 +11,13 @@ TicTacToe is General Assembly's WDI-ATL cohort 5's first project.  TicTacToe was
 
 The game of tic-tac-toe is played with two players.  Each player has a symbol, either an x or o.  The players take turns entering their symbol into an available square.  The goal is to get 3 symbols in a row either across a row, down a column or on the diagonal.  The first player to do so wins.  Sometimes there is not a winner - this result is referred to as a cat's tail game.
 
+###User Process
+
+* Enter the names for player X and player O
+* Enter the name of the first player
+* Click "play game"
+* Click "play again" if playing another game is desired
+
 
 ###Languages Used
 
@@ -24,6 +31,12 @@ The game of tic-tac-toe is played with two players.  Each player has a symbol, e
 deployed: http://cardnoles.github.io/TicTacToe/
 
 github site: https://github.com/cardnoles/TicTacToe
+
+###ToDos
+
+* make all elements responsive
+* add a tally for multiple games
+* enhance user experience
 
 
 
