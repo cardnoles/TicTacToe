@@ -9,14 +9,14 @@ TicTacToe is General Assembly's WDI-ATL cohort 5's first project.  TicTacToe was
 
 ###TicTacToe Basics
 
-The game of tic-tac-toe is played with two players.  Each player has a symbol, either an x or o.  The players take turns entering their symbol into an available square.  The goal is to get 3 symbols in a row either across a row, down a column or on the diagonal.  The first player to do so wins.  Sometime there is not a winner - the result is referred to as a cat's tail game.
+The game of tic-tac-toe is played with two players.  Each player has a symbol, either an x or o.  The players take turns entering their symbol into an available square.  The goal is to get 3 symbols in a row either across a row, down a column or on the diagonal.  The first player to do so wins.  Sometimes there is not a winner - this result is referred to as a cat's tail game.
 
 
 ###Languages Used
 
-HTML
-CSS
-Javascript
+* HTML
+* CSS
+* JavaScript
 
 
 ###Links
