@@ -4,7 +4,7 @@
 
 ###Project One
 
-TicTacToe is General Assembly's WDI-ATL cohort 5's first project.  TicTacToe was developed using HTML, CSS, and Javascript.  Manipulating the DOM, creating a solid front end, and successfully deploying the project were the main requirements.  Bonus features and other games were presented as options for this assignment.  This TicTacToe game does not fall into the bonus category.
+TicTacToe is General Assembly's WDI-ATL cohort 5's first project.  TicTacToe was developed using HTML, CSS, and JavaScript.  Manipulating the DOM, creating a solid front end, and successfully deploying the project were the main requirements.  Bonus features and other games were presented as options for this assignment.  This TicTacToe game does not fall into the bonus category.
 
 
 ###TicTacToe Basics
