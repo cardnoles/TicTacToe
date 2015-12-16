@@ -11,6 +11,7 @@ h1 {
   width: 45%;
   margin: 0px auto;
   text-align: center;
+  font-family: 'Londrina Solid', cursive;
 }
 
 
@@ -27,6 +28,7 @@ label {
   font-size: 28px;
   width: 10%;
   margin: 0% 0% 1% 2.5%;
+  font-family: Lato, 400;
 
 }
 
@@ -41,6 +43,7 @@ input {
   font-size: 20px;
   text-indent: 5%;
   cursor: pointer;
+  font-family: Arial;
 }
 
 h2 {
@@ -52,19 +55,23 @@ h2 {
   border-radius: 25px;
   padding: 10px;
   text-align: center;
+  font-family: Lato, 400;
 }
 
 
 
 h3 {
   position: relative;
-  width: 70%;
-  background-color: white;
+  width: 85%;
+  background-color: black;
   border-radius: 5px;
   padding: 5px;
-  border: 2px black solid;
+  border: 2px red solid;
   text-align: center;
   margin: 10px auto;
+  font-family: Arial;
+  font-size: 24px;
+  color: white;
 }
 
 button {
@@ -76,6 +83,7 @@ color: white;
 position: block;
 margin: 5px 33%;
 cursor: pointer;
+font-family: Lato, 400;
 }
 
 
@@ -106,7 +114,7 @@ p {
   font-size: 128px;
   padding: 12px;
   margin: 0;
-
+  font-family: 'Londrina Solid', cursive;
   border-radius: 25px;
   position: absolute;
   top: 50%;
@@ -118,62 +126,62 @@ p {
 
 #one {
   width: 31%;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
 }
 
 #two {
   width: 31%;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
 
 }
 
 #three {
   width: 31%;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
 
 }
 
 #four {
   width: 31%;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
 }
 
 #five {
   width: 31%;
-  border: 2px solid white;
+  border: 4px solid white;
 }
 
 #six {
   width: 31%;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
 
 }
 
 #seven {
   width: 31%;
-  border-right: 2px solid white;
-  border-top: 2px solid white;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
 }
 
 #eight {
   width: 31%;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
 
 }
 #nine {
   width: 31%;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
 }
 
 

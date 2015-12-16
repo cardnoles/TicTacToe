@@ -1,3 +1,5 @@
+
+function entireGame() {
 document.getElementById("game").onclick = playGame;
 
 
@@ -110,6 +112,7 @@ for (i = 0 ; i < divElements.length ; i++) {
        this.querySelector("p").textContent = "X";
        this.querySelector("p").style.background = "white";
        this.querySelector("p").style.border = "5px solid gray";
+       this.querySelector("p").style.color = "black";
        this.style.background = "black";
        }
      //puts an O with some style in the box if it is O's turn
@@ -221,20 +224,16 @@ for (i = 0 ; i < divElements.length ; i++) {
       if (moveCounter === 9) {
       document.querySelector("h3#alerts").textContent = "cat's tail - no winner";
       }
-    } //close gameOver if line 196
-   } //closes else on 107
+    } //close gameOver if line 199
+   } //closes else on 109
   } //closes onclick function
 } //closes for
+} //closes 'entire' function
+entireGame();
 
 
+//this function is ridiculous - need to create classes
 function playAgain() {
-
-    location.reload();
-}
-  document.getElementById("again").onclick = playAgain;
-
-//this function is ridiculous
-  /*console.log("playing again");
 
   document.getElementById("textOne").textContent = "";
   document.getElementById("textOne").style.background = "";
@@ -293,14 +292,13 @@ function playAgain() {
     board[i] = null;
     console.log(board);
     moveCounter = 0;
-}*/
+    }
+    entireGame();
+}
+
+document.getElementById("again").onclick = playAgain;
 
 
-
-  //playAgain();
-
-
-  //console.log(board);
 
 
 
