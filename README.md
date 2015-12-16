@@ -1,4 +1,6 @@
-# TicTacToe ![a tic-tac-toe board](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStko2seISMuGrQCe-yyEGYXvwSbn6YnQRnT4sScdYQxrl7myme)
+# TicTacToe 
+
+![a tic-tac-toe board](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStko2seISMuGrQCe-yyEGYXvwSbn6YnQRnT4sScdYQxrl7myme)
 
 ###Project One
 
