@@ -18,6 +18,7 @@ Javascript
 Links
 
 deployed: http://cardnoles.github.io/TicTacToe/
+github site: https://github.com/cardnoles/TicTacToe
 
 
 
