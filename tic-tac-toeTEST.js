@@ -1,16 +1,13 @@
-//var what = document.querySelector("p#textOne").textContent = 'x';
-
-
 document.getElementById("game").onclick = playGame;
 
 
   // initialize board
-var board = [];
-for (i = 0; i < 9; i++) {
-  board[i] = null;
-}
+  var board = [];
+    for (i = 0; i < 9; i++) {
+    board[i] = null;
+    }
 
-var gameOver = false;
+  var gameOver = false;
 
 var playerX;
 var playerO;
