@@ -13,8 +13,11 @@ The game of tic-tac-toe is played with two players.  Each player has a symbol, e
 ###Languages Used
 
 HTML
+
 CSS
+
 Javascript
+
 
 ###Links
 
